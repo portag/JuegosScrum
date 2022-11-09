@@ -1,0 +1,54 @@
+{
+    "volumes": {
+        "mysql_data": {}
+    },
+    "services": {
+        "mysql": {
+            "image": "mariadb",
+            "environment": {
+                "MARIADB_ROOT_PASSWORD": "toor",
+                "MARIADB_USER": "usuario",
+                "MARIADB_PASSWORD": "usuario",
+                "MARIADB_DATABASE": "servidor"
+
+            },
+            "volumes": [
+                "mysql_data:/var/lib/mysql/"
+            ]
+        },
+        "php-fpm": {
+            "build": {
+                "context": "./app/",
+                "dockerfile": "Dockerfile"
+            },
+            "volumes": [
+                "./app/:/var/www/html/"
+            ],
+            "depends_on": [
+                "mysql"
+            ]
+        },
+        "composer": {
+            "container_name": "composer2",
+            "image": "composer",
+            "command": ["composer", "update"],
+            "volumes": [
+                "./app/tema4:/var/www/html/tema4"
+            ],
+            "working_dir": "/var/www/html/tema4"
+        },
+        "nginx": {
+            "image": "nginx:alpine",
+            "volumes": [
+                "./app/:/var/www/",
+                "./nginx.php-fpm.conf:/etc/nginx/nginx.conf:ro"
+            ],
+            "ports": [
+                "8080:80"
+            ],
+            "depends_on": [
+                "php-fpm"
+            ]
+        }
+    }
+}
