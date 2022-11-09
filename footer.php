@@ -31,7 +31,7 @@
     <footer class="sticky-footer bg-info">
         <div class="container my-auto">
             <div class="copyright text-center my-auto">
-                <span class="text-light">Copyright &copy; PROYECTOS DIEGO 2022</span>
+                <span class="text-light">Copyright &copy; BLIBLIOTECA JUEGOS 2022</span>
             </div>
         </div>
     </footer>
