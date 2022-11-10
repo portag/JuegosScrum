@@ -16,6 +16,12 @@ if(isset($_GET["accion"])){
 
         header("Location: index.php");
     }
+
+    if($_GET["accion"] == "borrar"){
+        borrarJuego(filtrado($_GET["titulo"]));
+        header("Location: index.php");
+    }
+
 }
 
 ?>
