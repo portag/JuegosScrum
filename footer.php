@@ -67,6 +67,9 @@
         </div>
     </div>
 
+
+
+
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -84,47 +87,90 @@
 
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
+
     <script>
+
         // Set new default font family and font color to mimic Bootstrap's default styling
         Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
         Chart.defaults.global.defaultFontColor = '#858796';
 
+
+        
+
         // Pie Chart Example
-        var ctx = document.getElementById("myPieChart");
-        var myPieChart = new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ["Completado", "no"],
-                datasets: [{
-                    data: [50, 50],
-                    backgroundColor: ['#4e73df', '#1cc88a'],
-                    hoverBackgroundColor: ['#2e59d9', '#17a673'],
-                    hoverBorderColor: "rgba(234, 236, 244, 1)",
-                }],
-            },
-            options: {
-                maintainAspectRatio: false,
-                tooltips: {
-                    backgroundColor: "rgb(255,255,255)",
-                    bodyFontColor: "#858796",
-                    borderColor: '#dddfeb',
-                    borderWidth: 1,
-                    xPadding: 15,
-                    yPadding: 15,
-                    displayColors: false,
-                    caretPadding: 10,
-                },
-                legend: {
-                    display: false
-                },
-                cutoutPercentage: 80,
-            },
-        });
+        // var ctx = document.getElementById("myPieChart");
+        // var myPieChart = new Chart(ctx, {
+        //     type: 'doughnut',
+        //     data: {
+        //         labels: ["Completado", "no"],
+        //         datasets: [{
+        //             data: [50, 50],
+        //             backgroundColor: ['#4e73df', '#1cc88a'],
+        //             hoverBackgroundColor: ['#2e59d9', '#17a673'],
+        //             hoverBorderColor: "rgba(234, 236, 244, 1)",
+        //         }],
+        //     },
+        //     options: {
+        //         maintainAspectRatio: false,
+        //         tooltips: {
+        //             backgroundColor: "rgb(255,255,255)",
+        //             bodyFontColor: "#858796",
+        //             borderColor: '#dddfeb',
+        //             borderWidth: 1,
+        //             xPadding: 15,
+        //             yPadding: 15,
+        //             displayColors: false,
+        //             caretPadding: 10,
+        //         },
+        //         legend: {
+        //             display: false
+        //         },
+        //         cutoutPercentage: 80,
+        //     },
+        // });
     </script>
     <script src="js/demo/chart-bar-demo.js"></script>
 
 
+    <!-- MODAL INSERTAR TAREA -->
+    <div class="modal fade" id="nuevaTarea" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Nuevo Juego</h5>
+        </div>
+        <div class="modal-body">
+            <form id='formInsertarTarea' > 
 
+                <div class='mb-3'>
+                    <label for='titlulo' class='form-label'>Titulo</label>
+                    <input type='text' name='titulo' class='form-control' aria-describedby='emailHelp'>
+                </div>
+
+                <div class='mb-3'>
+                    <label for='descripcion' class='form-label'>Descripción</label>
+                    <textarea class='form-control' name="descripcion" id="" cols="30" rows="5"></textarea>
+                </div>
+
+                <div class='mb-3'>
+                    <label for='plataforma' class='form-label'>Plataforma</label>
+                    <input type='range' name='plataforma' step='1'  class='form-control' min='1' max='5'>
+                </div>
+
+                <div class='mb-3'>
+                    <label for='fechaFin' class='form-label'>Fecha Fin</label>
+                    <input type='date' name='fechaFin' id='fechaFin' class='form-control' aria-describedby='emailHelp'>
+                </div>
+
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type='submit' name='insertarTarea' class='btn btn-primary' form="formInsertarTarea" formaction="controlador.php" formmethod="get">Enviar</button>
+        </div>
+        </div>
+    </div>
+    </div>
 
 
 
