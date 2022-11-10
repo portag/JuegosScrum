@@ -35,7 +35,7 @@
                 </div>
                 <div class="sidebar-brand-text mx-3 text-center">JUEGOS <sup>8D</sup></div>
             </a>
-
+    
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
@@ -51,14 +51,14 @@
                 <div id="collapsePages" class="collapse show" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="addProyecto.php">Añadir juego</a>
-                        <a class="collapse-item" href="controlador.php?accion=eliminarTodo">Eliminar juego</a>
+
                         <a class="collapse-item" href="addProyecto.php">Añadir localizacion</a>
-                        <a class="collapse-item" href="controlador.php?accion=eliminarTodo">Eliminar localizacion</a>
+
                     </div>
                 </div>
             </li>
 
-            
+
 
 
             <!-- Divider -->
@@ -81,10 +81,7 @@
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light  topbar mb-4 static-top bg-dark shadow">
 
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3 text-dark bg-white">
-                        <i class="fa fa-bars"></i>
-                    </button>
+
 
 
 
