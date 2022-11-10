@@ -5,20 +5,20 @@ include("modelo.php");
 ?>
 <?php
 
-if(isset($_GET["accion"])){
-    if($_GET["accion"] == "insertar"){
+if(isset($POST["accion"])){
+    if($_POST["accion"] == "insertar"){
 
-        $titulo = filtrado($_GET["titulo"]);
-        $descripcion = filtrado($_GET["descripcion"]);
-        $plataforma = filtrado($_GET["plataforma"]);
-        $genero = filtrado($_GET["genero"]);
+        $titulo = filtrado($_POST["titulo"]);
+        $descripcion = filtrado($_POST["descripcion"]);
+        $plataforma = filtrado($_POST["plataforma"]);
+        $genero = filtrado($_POST["genero"]);
         insertarJuego($titulo, $descripcion, $plataforma, $genero);
 
         header("Location: index.php");
     }
 
-    if($_GET["accion"] == "borrar"){
-        borrarJuego(filtrado($_GET["titulo"]));
+    if($_POST["accion"] == "borrar"){
+        borrarJuego(filtrado($_POST["titulo"]));
         header("Location: index.php");
     }
 

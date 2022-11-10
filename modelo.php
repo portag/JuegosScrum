@@ -24,7 +24,7 @@
         try {
             //mariadb --> nombre del contenedor donde tengamos mysql
 
-            $dsn = "mysql:host=mysql;dbname=scrum";
+            $dsn = "mysql:host=localhost;dbname=scrum";
             $dbh = new PDO($dsn, "root", "toor");
         } catch (PDOException $e){
             echo $e->getMessage();
