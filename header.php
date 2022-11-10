@@ -26,14 +26,14 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-info sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-                <div class="sidebar-brand-icon bg-login-image img-thumbnail rotate-n-15 text-info  w-100">
+                <div class="sidebar-brand-icon bg-password-image img-thumbnail rotate-n-15 text-dark  w-100">
                     <i class="fas fa-laugh-wink" style="visibility:hidden"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">JUEGOS <sup>8D</sup></div>
+                <div class="sidebar-brand-text mx-3 text-center">JUEGOS <sup>8D</sup></div>
             </a>
 
             <!-- Divider -->
@@ -79,10 +79,10 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light  topbar mb-4 static-top bg-info shadow">
+                <nav class="navbar navbar-expand navbar-light  topbar mb-4 static-top bg-dark shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3 text-info bg-white">
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3 text-dark bg-white">
                         <i class="fa fa-bars"></i>
                     </button>
 
@@ -90,26 +90,6 @@
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-
-
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-lg-inline text-white"><?php if (isset($_SESSION['usuario'])) {
-                                                                                echo $_SESSION['usuario'];
-                                                                            } ?></span>
-
-                                <div class="img-profile bg-login-image rounded-circle"></div>
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                
-                                <a class="dropdown-item" href="controlador.php?accion=salir">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
-                        </li>
 
                     </ul>
                 </nav>
