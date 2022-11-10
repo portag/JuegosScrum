@@ -25,37 +25,33 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-info text-center">Proyectos</h6>
+            <h6 class="m-0 font-weight-bold text-dark text-center">Biblioteca</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-bordered text-center" style="font-size: 15px;" id="dataTable" width="100%" cellspacing="0">
+            <table class="table table-bordered text-center" style="font-size: 15px;" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>Nombre</th>
-                            <th>FechaInicio</th>
-                            <th>FechaFin</th>
-                            <th>DiasTranscurridos</th>
-                            <th>Porcentaje</th>
-                            <th>Importancia</th>
+                            <th>Titulo</th>
+                            <th>Descripcion</th>
+                            <th>Plataforma</th>
+                            <th>Género</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
-                            <th>Nombre</th>
-                            <th>FechaInicio</th>
-                            <th>FechaFin</th>
-                            <th>DiasTranscurridos</th>
-                            <th>Porcentaje</th>
-                            <th>Importancia</th>
+                        <th>Titulo</th>
+                            <th>Descripcion</th>
+                            <th>Plataforma</th>
+                            <th>Género</th>
                         </tr>
                     </tfoot>
                     <tbody>
 
                         <?php
 
-                        if (isset($_SESSION["proyectos"])) {
-                            if (isset($_SESSION["proyectos"][0]) && is_array($_SESSION["proyectos"][0])) {
+                        if (isset($_SESSION["juegos"])) {
+                            if (isset($_SESSION["juegos"][0]) && is_array($_SESSION["juegos"][0])) {
                                 foreach ($_SESSION["proyectos"] as $proyecto) {
                                     echo ("<tr>" .
                                         "<td>" . $proyecto["nombre"] . "</>" .
