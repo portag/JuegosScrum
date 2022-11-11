@@ -1,4 +1,5 @@
 <?php include("header.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,42 +32,9 @@
         </div>
         <div class="card-body">
             <div class="table-responsive table-dark">
-
-                <table class="table table-bordered text-center text-white align-middle"
-                    style="font-size: 16px;margin-bottom: 0px;" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th>Título</th>
-                            <th>Descripción</th>
-                            <th>Plataforma</th>
-                            <th>Género</th>
-                            <th>Localizaciones</th>
-                            <th>Eliminar</th>
-
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                            <th>Título</th>
-                            <th>Descripción</th>
-                            <th>Plataforma</th>
-                            <th>Género</th>
-                            <th>Localizaciones</th>
-                            <th>Eliminar</th>
-
-                        </tr>
-                    </tfoot>
-                    <tbody>
-                        <td>Ejemplo</td>
-                        <td>Ejemplo</td>
-                        <td>Ejemplo</td>
-                        <td>Ejemplo</td>
-                        <td ><a href='controlador.php?accion=infoLocalizacion&id=' class='btn btn-info btn-circle' style='--bs-btn-color: #ffffff; --bs-btn-hover-color: #fff;'> <i
-                                    class='fas fa-map'></i></a></td>
-
-                        <td><a href='controlador.php?accion=borrar' class='btn btn-danger btn-circle'><i class='fas fa-trash' ></i></a></td>
-
-
+<?php
+               pintarJuegos()
+               ?>
                     </tbody>
                 </table>
 
