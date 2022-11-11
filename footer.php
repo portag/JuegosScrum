@@ -202,7 +202,7 @@
                     <h5 class="modal-title" id="exampleModalLabel">Nueva Localizacion</h5>
                 </div>
                 <div class="modal-body">
-                    <form id='formInsertarLoca'> 
+                    <form id='formInsertarLoca' > 
 
                     <div class='mb-3'>
                         <label for='nombre' class='form-label'>Nombre</label>
@@ -222,6 +222,11 @@
                     <div class='mb-3'>
                         <label for='importancia' class='form-label'>Importancia</label> <br>
                         <input type='number' name='importancia' class='form-control' min='1' max='3'>
+                    </div>
+
+                    <div class='mb-3'>
+                        <label for='idJuegos' class='form-label'>id</label> <br>
+                        <input type='number' name='idJuegos' class='form-control'>
                     </div>
 
                     </form>
