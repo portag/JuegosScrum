@@ -1,20 +1,20 @@
 <?php
 
     //CONECCION A BASE DE DATOS HEROKU
-    function conexionBD2() {
-        $dbh = null;
+    // function conexionBD2() {
+    //     $dbh = null;
 
-        try {
-            //mariadb --> nombre del contenedor donde tengamos mysql
-            //FALTA CONECTARTLO A HEROKU 
-            $dsn = "mysql:host=mysql;dbname=servidor";
-            $dbh = new PDO($dsn, "root", "toor");
-        } catch (PDOException $e){
-            echo $e->getMessage();
-        }
+    //     try {
+    //         //mariadb --> nombre del contenedor donde tengamos mysql
+    //         //FALTA CONECTARTLO A HEROKU 
+    //         $dsn = "mysql:host=mysql;dbname=servidor";
+    //         $dbh = new PDO($dsn, "root", "toor");
+    //     } catch (PDOException $e){
+    //         echo $e->getMessage();
+    //     }
 
-        return $dbh;
-    }
+    //     return $dbh;
+    // }
 
 
     //CONECCION A BASE DE DATOS LOCAL
@@ -58,7 +58,7 @@
         $conexion = conexionBD();
 
         try {
-            $stmt = $conexion->prepare("INSERT INTO localizaciones (nombre, descripcion, pInteres, importancia, idJuegos) VALUES (?, ?, ?, ?, ?)" );
+            $stmt = $conexion->prepare("INSERT INTO localizaciones (nombre, descripcion, pInteres, importancia, idJuegos) VALUES (?, ?, ?, ?, ?)");
     
             $stmt->bindValue(1, $nombre);
             $stmt->bindValue(2, $descripcion);
