@@ -12,7 +12,7 @@ function filtrado($datos)
 ?>
 <?php
     include('modelo.php');
-    //$juegos = selectJuegos($_GET['id']);
+    $juegos = selectJuegos();
 
     echo "<ul class='list-group'>";
     //Cabecera
@@ -31,7 +31,7 @@ function filtrado($datos)
       echo "<div class='row'>";
 
       forEach($juego as $key => $value) {
-        if ($key != "id" && $key != "titulo") {
+        if ($key != "id") {
           echo "<div class='col'>";
           echo $value;
           echo "</div>";
@@ -40,7 +40,7 @@ function filtrado($datos)
 
       //Acciones
       echo "<div class='col'>";
-      echo "x";
+      echo "#####";
       echo "</div>";
 
       echo "</div>";
