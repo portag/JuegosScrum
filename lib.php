@@ -19,6 +19,7 @@ echo "<ul class='list-group'>";
 //Cabecera
 echo "<li class='list-group-item fw-bold'>";
 echo "<div class='row'>";
+echo "<div class='col'>ID</div>";
 echo "<div class='col'>Titulo</div>";
 echo "<div class='col'>Descripción</div>";
 echo "<div class='col'>Plataforma</div>";
@@ -32,11 +33,10 @@ foreach ($juegos as $juego) {
     echo "<div class='row'>";
 
     foreach ($juego as $key => $value) {
-        if ($key != "id") {
             echo "<div class='col'>";
             echo $value;
             echo "</div>";
-        }
+        
     }
 
     //Acciones
@@ -69,7 +69,9 @@ echo "<div class='col'>Nombre</div>";
 echo "<div class='col'>Descripción</div>";
 echo "<div class='col'>pInteres</div>";
 echo "<div class='col'>Importancia</div>";
+echo "<div class='col'>idJuego</div>";
 echo "<div class='col'>Acciones</div>";
+
 echo "</div>";
 echo "</li>";
 //Contenido
