@@ -59,7 +59,7 @@ echo "</ul>";
 <?php
 function pintarLocalizacion (){
 include('modelo.php');
-$localizaciones = selectLocalizacion();
+$localizaciones = selectLocalizacion($idJuegos);
 
 echo "<ul class='list-group'>";
 //Cabecera
