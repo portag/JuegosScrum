@@ -85,6 +85,27 @@
         $conexion = null; //Cerrar la conexión
     }
 
+    //MOSTRAR TABLA juegos DE LA BASE DE DATOS
+    function selectJuegos() {
+        
+        $conexion = conexionBD();
+        $tareas = null;
+
+        try {
+            $stmt = $conexion->prepare("SELECT * FROM juegos ");
+            $stmt->execute();
+            $tareas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $ex) {
+            echo $ex->getMessage();
+        }   
+        $conexion = null; //Cerrar la conexión
+
+        return $tareas;
+    }
+
+
+
+
 
 
 
