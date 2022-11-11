@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("lib.php");
+include_once("lib.php");
 include_once("modelo.php");
 ?>
 <?php
