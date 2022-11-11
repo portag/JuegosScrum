@@ -42,13 +42,9 @@ foreach ($juegos as $juego) {
     //Acciones
     echo "<div class='col'>";
     echo "<div class='col'>";
-    echo "<a href='controlador.php?accion=borrar&id=" . $juego['id'] . "' class='me-2'>";
-    echo "<a href='controlador.php?accion=borrarLocalizacion&id=" . $juego['id'] . "' class='me-2'>";
-    echo "<i class='fa-solid fa-trash'></i>";
-    echo "</a>";
-    echo "<a href='controlador.php?accion=infoLocalizacion&id=" . $juego['id'] . "'>";
-    echo "<i class='fa-solid fa-check text-danger'></i>";
-    echo "</a>";
+    echo "<a href='controlador.php?accion=infoLocalizacion&id=" . $juego['id'] . "' class='btn btn-info btn-circle' style='--bs-btn-color: #ffffff; --bs-btn-hover-color: #fff;'> <i
+    class='fas fa-map'></i></a>";
+    echo "<a href='controlador.php?accion=borrar&id=" . $juego['id'] . "'  class='btn btn-danger btn-circle'><i class='fas fa-trash' ></i></a>";
     echo "</div>";
     echo "</div>";
 
