@@ -74,6 +74,11 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>    
+
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
@@ -152,20 +157,50 @@
                     <textarea class='form-control' name="descripcion" id="" cols="30" rows="5"></textarea>
                 </div>
 
-                <div class='mb-3'>
-                    <label for='plataforma' class='form-label'>Plataforma</label>
-                    <input type='range' name='plataforma' step='1'  class='form-control' min='1' max='5'>
+
+                <!-- <div class='mb-3'>
+                    <label for='plataforma' class='form-label'>plataforma</label>
+                    <textarea class='form-control' name="plataforma" id="" cols="30" rows="5"></textarea>
                 </div>
 
                 <div class='mb-3'>
-                    <label for='fechaFin' class='form-label'>Fecha Fin</label>
-                    <input type='date' name='fechaFin' id='fechaFin' class='form-control' aria-describedby='emailHelp'>
+                    <label for='genero' class='form-label'>genero</label>
+                    <textarea class='form-control' name="genero" id="" cols="30" rows="5"></textarea>
+                </div> -->
+
+
+
+                <div class='mb-3'>
+                    <label for='plataforma'  class='form-label'>Plataforma</label> <br>
+                    <select class="form-select" name='plataforma' aria-label="Default select example">
+                    <option name='plataforma' value="PC">PC</option>
+                    <option name='plataforma' value="PS5">PS5</option>
+                    <option name='plataforma' value="SWICHT">SWICHT</option>
+                    <option name='plataforma' value="XBOX">XBOX</option>
+                    </select>
                 </div>
 
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="plataforma" name="plataforma">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Plataforma</label>
+                    </div>
+                    <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="aventura" name="aventura">
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Aventura</label>
+                    </div>
+                    <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="rol" name="rol">
+                    <label class="form-check-label" for="flexSwitchCheckDisabled">Role playing</label>
+                    </div>
+                    <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="lucha" name="lucha">
+                    <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">lucha</label>
+                </div>
+                
             </form>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary hidden-xs" data-bs-dismiss="modal">Close</button>
             <button type='submit' name='insertar' class='btn btn-primary' form="formInsertarTarea" formaction="controlador.php" formmethod="get">Enviar</button>
         </div>
         </div>

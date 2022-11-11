@@ -5,24 +5,15 @@ include("modelo.php");
 ?>
 <?php
 
-if(isset($POST["accion"])){
-    if($_POST["accion"] == "insertar"){
-
-        $titulo = filtrado($_POST["titulo"]);
-        $descripcion = filtrado($_POST["descripcion"]);
-        $plataforma = filtrado($_POST["plataforma"]);
-        $genero = filtrado($_POST["genero"]);
-        insertarJuego($titulo, $descripcion, $plataforma, $genero);
-
-        header("Location: index.php");
-    }
-
-    if($_POST["accion"] == "borrar"){
-        borrarJuego(filtrado($_POST["titulo"]));
-        header("Location: index.php");
-    }
-
+if(isset($_GET["insertar"])){
+    $titulo = filtrado($_GET["titulo"]);
+    $descripcion = filtrado($_GET["descripcion"]);
+    $plataforma = filtrado($_GET["plataforma"]);
+    $genero = filtrado($_GET["genero"]);
+    insertarJuego($titulo, $descripcion, $plataforma, $genero);
+    header("Location: index.php");
 }
+
 
 ?>
 
