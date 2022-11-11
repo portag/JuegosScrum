@@ -24,7 +24,7 @@ if (isset($_GET["insertarLocalizacion"])) {
     $pInteres = filtrado($_GET["pInteres"]);
     $importancia = filtrado($_GET["importancia"]);
     $titulo = filtrado($_GET["titulo"]);
-    insertarLocalizacion($nombre, $descripcion, $pInteres, $importancia, $titutlo);
+    insertarLocalizacion($nombre, $descripcion, $pInteres, $importancia, $titulo);
     header("Location: index.php");
 }
 
