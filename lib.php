@@ -40,7 +40,15 @@ function filtrado($datos)
 
       //Acciones
       echo "<div class='col'>";
-      echo "#####";
+      echo "<div class='col'>";
+  echo "<a href='controlador.php?accion=borrar&id=".$juego['id']."' class='me-2'>";
+  echo "<a href='controlador.php?accion=borrarLocalizacion&id=".$juego['id']."' class='me-2'>";
+  echo "<i class='fa-solid fa-trash'></i>";
+  echo "</a>";
+  echo "<a href='controlador.php?accion=infoLocalizacion&id=".$juego['id']."'>";
+  echo "<i class='fa-solid fa-check text-danger'></i>";
+  echo "</a>";
+  echo "</div>";
       echo "</div>";
 
       echo "</div>";
