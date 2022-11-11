@@ -27,32 +27,34 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-dark text-center">Juegos</h6>
+            <h6 class="m-0 font-weight-bold text-dark text-center">Localizaciones</h6>
         </div>
         <div class="card-body">
+        <a href='index.php' class='btn btn-dark float-right'><i class='fas fa-gamepad' ></i> Volver a Juegos</a>
+        <br><br>
             <div class="table-responsive table-dark">
 
                 <table class="table table-bordered text-center text-white align-middle"
                     style="font-size: 16px;margin-bottom: 0px;" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>Título</th>
+                            <th>Nombre</th>
                             <th>Descripción</th>
-                            <th>Plataforma</th>
-                            <th>Género</th>
-                            <th>Localizaciones</th>
+                            <th>Puntos Interés</th>
+                            <th>Importancia</th>
                             <th>Eliminar</th>
+                            
 
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
-                            <th>Título</th>
+                        <th>Nombre</th>
                             <th>Descripción</th>
-                            <th>Plataforma</th>
-                            <th>Género</th>
-                            <th>Localizaciones</th>
+                            <th>Puntos Interés</th>
+                            <th>Importancia</th>
                             <th>Eliminar</th>
+                            
 
                         </tr>
                     </tfoot>
@@ -61,10 +63,9 @@
                         <td>Ejemplo</td>
                         <td>Ejemplo</td>
                         <td>Ejemplo</td>
-                        <td ><a href='controlador.php?accion=infoLocalizacion&id=' class='btn btn-info btn-circle' style='--bs-btn-color: #ffffff; --bs-btn-hover-color: #fff;'> <i
-                                    class='fas fa-map'></i></a></td>
+                       
 
-                        <td><a href='controlador.php?accion=borrar' class='btn btn-danger btn-circle'><i class='fas fa-trash' ></i></a></td>
+                        <td><a href='controlador.php?accion=borrarLocalizacion' class='btn btn-danger btn-circle'><i class='fas fa-trash' ></i></a></td>
 
 
                     </tbody>
