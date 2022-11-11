@@ -137,7 +137,7 @@
     <script src="js/demo/chart-bar-demo.js"></script>
 
 
-    <!-- MODAL INSERTAR TAREA -->
+    <!-- MODAL INSERTAR JUEGO -->
     <div class="modal fade" id="insertar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -157,14 +157,6 @@
                             <textarea class='form-control' name="descripcion" id="" cols="30" rows="5"></textarea>
                         </div>
 
-        <!-- 
-                        <div class='mb-3'>
-                            <label for='plataforma' class='form-label'>plataforma</label>
-                            <textarea class='form-control' name="plataforma" id="" cols="30" rows="5"></textarea>
-                        </div>
-        -->
-
-
                         <div class='mb-3'>
                             <label for='plataforma'  class='form-label'>Plataforma</label> <br>
                             <select class="form-select" name='plataforma' aria-label="Default select example">
@@ -175,13 +167,19 @@
                             </select>
                         </div>
 
+                    <div class='mb-3'>
+                        <input type="radio" class="btn-check" name="genero" value='plataformas' id="option1" autocomplete="off">
+                        <label class="btn btn-secondary" for="option1">Plataformas</label>
 
-                        
-                        <div class='mb-3'>
-                            <label for='genero' class='form-label'>genero</label>
-                            <textarea class='form-control' name="genero" id="" cols="30" rows="5"></textarea>
-                        </div>
+                        <input type="radio" class="btn-check" name="genero" value='terror' id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Terror</label>
 
+                        <input type="radio" class="btn-check" name="genero" value='lucha' id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Lucha</label>
+
+                        <input type="radio" class="btn-check" name="genero" value='rpg' id="option4" autocomplete="off">
+                        <label class="btn btn-secondary" for="option4">RPG</label>
+                    </div>
 
                         
                     </form>
@@ -189,6 +187,47 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary hidden-xs" data-bs-dismiss="modal">Close</button>
                     <button type='submit' name='insertar' class='btn btn-primary' form="formInsertarTarea" formaction="controlador.php" formmethod="get">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- MODAL INSERTAR LOCALIZACION -->
+    <div class="modal fade" id="insertar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Nueva Localizacion</h5>
+                </div>
+                <div class="modal-body">
+                    <form id='formInsertarLoca' > 
+
+                    <div class='mb-3'>
+                        <label for='nombre' class='form-label'>Nombre</label>
+                        <input type='text' name='nombre' class='form-control'>
+                    </div>
+
+                    <div class='mb-3'>
+                        <label for='descripcion' class='form-label'>Descripción</label>
+                        <textarea class='form-control' name="descripcion" id="" cols="30" rows="5"></textarea>
+                    </div>
+
+                    <div class='mb-3'>
+                        <label for='pInteres' class='form-label'>Punto de interes</label>
+                        <input type='text' name='pInteres' class='form-control'>
+                    </div>
+
+                    <div class='mb-3'>
+                        <label for='importancia' class='form-label'>Importancia</label> <br>
+                        <input type='number' name='importancia' class='form-control' min='1' max='3'>
+                    </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type='submit' name='addLoca' class='btn btn-primary' form="formInsertarLoca" formaction="controlador.php" formmethod="get">Añadir</button>
                 </div>
             </div>
         </div>

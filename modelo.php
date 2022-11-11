@@ -52,6 +52,25 @@
         }
     }
 
+    //FUNCION INSERTAR LOCALIZACION EN LA BASE DE DATOS
+    function insertarLocalizacion($nombre, $descripcion, $pInteres, $importancia ){
+        
+        $conexion = conexionBD();
+
+        try {
+            $stmt = $conexion->prepare("INSERT INTO localizaciones (nombre, descripcion, pInteres, importancia) VALUES (?, ?, ?, ?)" );
+    
+            $stmt->bindValue(1, $nombre);
+            $stmt->bindValue(2, $descripcion);
+            $stmt->bindValue(3, $pInteres);
+            $stmt->bindValue(4, $importancia);
+            $stmt->execute();
+        } catch (PDOException $ex) {
+            echo $ex->getMessage();
+        }
+    }
+
+
     //FUNCION BORRAR JUEGO DE LA BASE DE DATOS
     function borrarJuego($tituloJuego) {
         $conexion = conexionBD();
@@ -65,6 +84,7 @@
         }
         $conexion = null; //Cerrar la conexión
     }
+
 
 
 
