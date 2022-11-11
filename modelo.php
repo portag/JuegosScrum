@@ -58,7 +58,7 @@
         $conexion = conexionBD();
 
         try {
-            $stmt = $conexion->prepare("INSERT INTO localizaciones (nombre, descripcion, pInteres, importancia) VALUES (?, ?, ?, ?, ?)" );
+            $stmt = $conexion->prepare("INSERT INTO localizaciones (nombre, descripcion, pInteres, importancia, idJuegos) VALUES (?, ?, ?, ?, ?)" );
     
             $stmt->bindValue(1, $nombre);
             $stmt->bindValue(2, $descripcion);
@@ -104,6 +104,27 @@
 
         return $tareas;
     }
+
+    //BORRAR LOCALIZACION DE BASE DE DATO POR NOMBRE
+    function borrarLocalizacion($nombre) {
+
+        $conexion = conexionBD();
+
+        try {
+            $stmt = $conexion->prepare("DELETE FROM localizaciones WHERE nombre = ?");
+            $stmt->bindValue(1, $nombre);
+            $stmt->execute();
+        } catch (PDOException $ex) {
+            echo $ex->getMessage();
+        }
+        $conexion = null; //Cerrar la conexión
+    }
+
+
+
+
+
+
 
 
 
