@@ -52,8 +52,7 @@
                 </a>
                 <div id="collapsePages" class="collapse show" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="addProyecto.php">Añadir juego</a>
-
+                        <a class="collapse-item" href="#" data-toggle="modal" data-target="#insertar">Añadir juego</a>
                         <a class="collapse-item" href="addProyecto.php">Añadir localizacion</a>
 
                     </div>

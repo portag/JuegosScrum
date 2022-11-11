@@ -25,7 +25,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-info">Añadir Proyecto</h6>
+            <h6 class="m-0 font-weight-bold text-info">Añadir Juego</h6>
         </div>
         <div class="card-body">
             <div class="p-5">
@@ -34,22 +34,19 @@
                 </div>
                 <form class="user" action="controlador.php" method="post">
                     <div class="form-group">
-                        <input type="text" class="form-control form-control-user" id="nombre" name="nombre" aria-describedby="nombre" placeholder="nombre">
+                        <input type="text" class="form-control form-control-user" id="titulo" name="titulo" aria-describedby="titulo" placeholder="titulo">
                     </div>
                     <div class="form-group">
-                        <input type="date" class="form-control form-control-user" id="fechaI" name="fechaI" aria-describedby="Fecha inicio" placeholder="Fecha inicio">
+                        <input type="text" class="form-control form-control-user" id="descripcion" name="descripcion" aria-describedby="descripcion" placeholder="descripcion">
                     </div>
                     <div class="form-group">
-                        <input type="date" class="form-control form-control-user" id="fechaF" name="fechaF" aria-describedby="Fecha fin" placeholder="Fecha fin">
+                        <input type="text" class="form-control form-control-user" id="plataforma" name="plataforma" aria-describedby="plataforma" placeholder="plataforma">
                     </div>
                     <div class="form-group">
-                        <input type="number" class="form-control form-control-user" id="porcentaje" name="porcentaje" aria-describedby="porcentaje" placeholder="Porcentaje Completado" min=0 max=100>
-                    </div>
-                    <div class="form-group">
-                        <input type="number" class="form-control form-control-user" id="importancia" name="importancia" aria-describedby="importancia" placeholder="importancia" min=1 max=5>
+                        <input type="text" class="form-control form-control-user" id="genero" name="genero" aria-describedby="genero" placeholder="genero" min=0 max=100>
                     </div>
 
-                    <input type="submit" id="add" name="add" value="Añadir" class="btn btn-info btn-user btn-block" />
+                    <input type="submit" id="add" name="accion" value="insertar" class="btn btn-info btn-user btn-block" />
 
                 </form>
                 <hr>
