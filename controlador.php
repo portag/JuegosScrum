@@ -1,7 +1,7 @@
 <?php
 session_start();
-include("lib.php");
-include("modelo.php");
+include_once("lib.php");
+include_once("modelo.php");
 ?>
 <?php
 
