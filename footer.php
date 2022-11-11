@@ -175,13 +175,19 @@
                             </select>
                         </div>
 
+                    <div class='mb-3'>
+                        <input type="radio" class="btn-check" name="genero" value='plataformas' id="option1" autocomplete="off">
+                        <label class="btn btn-secondary" for="option1">Plataformas</label>
 
-                        
-                        <div class='mb-3'>
-                            <label for='genero' class='form-label'>genero</label>
-                            <textarea class='form-control' name="genero" id="" cols="30" rows="5"></textarea>
-                        </div>
+                        <input type="radio" class="btn-check" name="genero" value='terror' id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Terror</label>
 
+                        <input type="radio" class="btn-check" name="genero" value='lucha' id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Lucha</label>
+
+                        <input type="radio" class="btn-check" name="genero" value='rpg' id="option4" autocomplete="off">
+                        <label class="btn btn-secondary" for="option4">RPG</label>
+                    </div>
 
                         
                     </form>
