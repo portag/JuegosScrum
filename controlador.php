@@ -46,17 +46,11 @@ if (isset($_GET["accion"])) {
         header("Location: localizaciones.php");
     }
 
-    if($_GET["accion"] == "infoLocalizacion") {
+    if ($_GET["accion"] == "infoLocalizacion") {
 
-        $i=$_GET["id"];
-        if(mostrarLocalizaciones($_GET["id"])){
-            
-            header("Location:localizaciones.php?ids=".$i);
-        }
-
+        $i = $_GET["id"];
+        header("Location:localizaciones.php?ids=" . $i);
     }
-
-
 }
 
 
