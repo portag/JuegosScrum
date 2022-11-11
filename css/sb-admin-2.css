@@ -10872,6 +10872,7 @@ a:focus {
   background: url("https://imgs.search.brave.com/nej9_I6qjyS7gAXqWmM6ba5Hb07jegFsuIQya7fLdaQ/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5R/M3hXcURhM3plb005/MWtqMFhSWTlRSGFI/YSZwaWQ9QXBp");
   background-position: center;
   background-size: cover;
+  margin-left: 60%;
 }
 
 form.user .custom-checkbox.small label {

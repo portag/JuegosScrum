@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
 
 </head>
 
@@ -29,60 +29,9 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
-            <table class="table table-bordered text-center" style="font-size: 15px;" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th>Titulo</th>
-                            <th>Descripcion</th>
-                            <th>Plataforma</th>
-                            <th>Género</th>
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                        <th>Titulo</th>
-                            <th>Descripcion</th>
-                            <th>Plataforma</th>
-                            <th>Género</th>
-                        </tr>
-                    </tfoot>
-                    <tbody>
+            
+            pintarJuegos();
 
-                        <?php
-
-                        if (isset($_SESSION["juegos"])) {
-                            if (isset($_SESSION["juegos"][0]) && is_array($_SESSION["juegos"][0])) {
-                                foreach ($_SESSION["proyectos"] as $proyecto) {
-                                    echo ("<tr>" .
-                                        "<td>" . $proyecto["nombre"] . "</>" .
-                                        "<td>" . date('d/m/Y', strtotime($proyecto["fechaI"])) . "</>" .
-                                        "<td>" . date('d/m/Y', strtotime($proyecto["fechaF"])) . "</>" .
-                                        "<td>" . $proyecto["dias"] . "</>" .
-                                        "<td>" . $proyecto["porcentaje"] . "</>" .
-                                        "<td>" . $proyecto["importancia"] . "</>" .
-                                        "<td><a href='verProyecto.php?id=" . $proyecto["id"] . "' class='btn btn-info btn-circle'> <i class='fas fa-info-circle'></i></a></>" .
-                                        "<td><a href='controlador.php?accion=eliminar&id=" . $proyecto["id"] . "'class='btn btn-danger btn-circle'><i class='fas fa-trash'></i></a></>" .
-                                        "</tr>"
-                                    );
-                                }
-                            } else if ($_SESSION["proyectos"] != array()) {
-                                echo ("<tr>" .
-                                    "<td>" . $_SESSION["proyectos"]["nombre"] . "</>" .
-                                    "<td>" . date('d/m/Y', strtotime($proyecto["fechaI"])) . "</>" .
-                                    "<td>" . date('d/m/Y', strtotime($proyecto["fechaF"])) . "</>" .
-                                    "<td>" . $_SESSION["proyectos"]["dias"] . "</>" .
-                                    "<td>" . $_SESSION["proyectos"]["porcentaje"] . "</>" .
-                                    "<td>" . $_SESSION["proyectos"]["importancia"] . "</>" .
-                                    "<td><a href='verProyecto.php?id=" . $proyecto["id"] . "' class='btn btn-info btn-circle'> <i class='fas fa-info-circle'></i></a></>" .
-                                    "<td><a href='controlador.php?accion=eliminar&id=" . $proyecto["id"] . "'class='btn btn-danger btn-circle'><i class='fas fa-trash'></i></a></>" .
-                                    "</tr>"
-                                );
-                            }
-                        }
-                        ?>
-
-                    </tbody>
-                </table>
             </div>
         </div>
     </div>
