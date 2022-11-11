@@ -104,14 +104,13 @@
         return $tareas;
     }
 
-    //BORRAR LOCALIZACION DE BASE DE DATO POR NOMBRE
-    function borrarLocalizacion($nombre) {
+    function borrarLocalizacion($idJuegos) {
 
         $conexion = conexionBD();
 
         try {
-            $stmt = $conexion->prepare("DELETE FROM localizaciones WHERE nombre = ?");
-            $stmt->bindValue(1, $nombre);
+            $stmt = $conexion->prepare("DELETE FROM localizaciones WHERE idJuegos = ?");
+            $stmt->bindValue(1, $idJuegos);
             $stmt->execute();
         } catch (PDOException $ex) {
             echo $ex->getMessage();
@@ -121,13 +120,14 @@
 
 
 //MOSTRAR TABLA juegos DE LA BASE DE DATOS
-function selectLocalizacion() {
+function selectLocalizacion($idJuegos) {
 
     $conexion = conexionBD();
     $tareas = null;
 
     try {
-        $stmt = $conexion->prepare("SELECT * FROM localizaciones");
+        $stmt = $conexion->prepare("SELECT * FROM localizaciones WHERE idJuegos = ?");
+        $stmt->bindValue(1, $idJuegos);
         $stmt->execute();
         $tareas = $stmt->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $ex) {
@@ -137,6 +137,9 @@ function selectLocalizacion() {
 
     return $tareas;
 }
+
+
+
 
 
 
