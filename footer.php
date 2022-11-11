@@ -31,7 +31,7 @@
     <footer class="sticky-footer bg-dark">
         <div class="container my-auto">
             <div class="copyright text-center my-auto">
-                <span class="text-light">Copyright &copy; BLIBLIOTECA JUEGOS 2022</span>
+                <span class="text-light font-weight-bold">Copyright &copy; BLIBLIOTECA JUEGOS 2022</span>
             </div>
         </div>
     </footer>
