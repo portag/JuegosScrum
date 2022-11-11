@@ -38,7 +38,7 @@
                 <div class="sidebar-brand-icon bg-password-image img-thumbnail rotate-n-15 text-dark  w-100">
                     <i class="fas fa-laugh-wink" style="visibility:hidden"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3 text-center">JUEGOS <sup>8D</sup></div>
+                <div class="sidebar-brand-text mx-3 text-center">JUEGOS 8D</div>
             </a>
 
             <!-- Divider -->
