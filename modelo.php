@@ -74,19 +74,18 @@
 
 
     //FUNCION BORRAR JUEGO DE LA BASE DE DATOS
-    function borrarJuego($tituloJuego) {
+    function borrarJuego($idJuego) {
         $conexion = conexionBD();
 
         try {
-            $stmt = $conexion->prepare("DELETE FROM juegos WHERE titulo = ?");
-            $stmt->bindValue(1, $tituloJuego);
+            $stmt = $conexion->prepare("DELETE FROM juegos WHERE id = ?");
+            $stmt->bindValue(1, $idJuego);
             $stmt->execute();
         } catch (PDOException $ex) {
             echo $ex->getMessage();
         }
         $conexion = null; //Cerrar la conexión
     }
-
     //MOSTRAR TABLA juegos DE LA BASE DE DATOS
     function selectJuegos() {
 
@@ -121,7 +120,23 @@
     }
 
 
+//MOSTRAR TABLA juegos DE LA BASE DE DATOS
+function selectLocalizacion() {
 
+    $conexion = conexionBD();
+    $tareas = null;
+
+    try {
+        $stmt = $conexion->prepare("SELECT * FROM localizaciones");
+        $stmt->execute();
+        $tareas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $ex) {
+        echo $ex->getMessage();
+    }   
+    $conexion = null; //Cerrar la conexión
+
+    return $tareas;
+}
 
 
 

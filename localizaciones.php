@@ -34,38 +34,9 @@
         <br><br>
             <div class="table-responsive table-dark">
 
-                <table class="table table-bordered text-center text-white align-middle"
-                    style="font-size: 16px;margin-bottom: 0px;" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Descripción</th>
-                            <th>Puntos Interés</th>
-                            <th>Importancia</th>
-                            <th>Eliminar</th>
-                            
-
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                        <th>Nombre</th>
-                            <th>Descripción</th>
-                            <th>Puntos Interés</th>
-                            <th>Importancia</th>
-                            <th>Eliminar</th>
-                            
-
-                        </tr>
-                    </tfoot>
-                    <tbody>
-                        <td>Ejemplo</td>
-                        <td>Ejemplo</td>
-                        <td>Ejemplo</td>
-                        <td>Ejemplo</td>
-                       
-
-                        <td><a href='controlador.php?accion=borrarLocalizacion' class='btn btn-danger btn-circle'><i class='fas fa-trash' ></i></a></td>
+            <?php
+               pintarLocalizacion()
+               ?>
 
 
                     </tbody>

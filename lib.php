@@ -56,6 +56,49 @@ echo "</ul>";
 
 }
 ?>
+<?php
+function pintarLocalizacion (){
+include('modelo.php');
+$localizaciones = selectLocalizacion();
 
+echo "<ul class='list-group'>";
+//Cabecera
+echo "<li class='list-group-item fw-bold'>";
+echo "<div class='row'>";
+echo "<div class='col'>Nombre</div>";
+echo "<div class='col'>Descripción</div>";
+echo "<div class='col'>pInteres</div>";
+echo "<div class='col'>Importancia</div>";
+echo "<div class='col'>Acciones</div>";
+echo "</div>";
+echo "</li>";
+//Contenido
+foreach ($localizaciones as $localizacion) {
+    echo "<li class='list-group-item'>";
+    echo "<div class='row'>";
+
+    foreach ($localizacion as $key => $value) {
+        if ($key != "id") {
+            echo "<div class='col'>";
+            echo $value;
+            echo "</div>";
+        }
+    }
+
+    //Acciones
+    echo "<div class='col'>";
+    echo "<div class='col'>";
+    echo "<a href='controlador.php?accion=borrarLocalizacion&id=" . $localizacion['nombre'] . "'  class='btn btn-danger btn-circle'><i class='fas fa-trash' ></i></a>";
+    echo "</div>";
+    echo "</div>";
+
+    echo "</div>";
+    echo "</li>";
+}
+echo "</ul>";
+
+
+}
+?>
 </tbody>
 </table>
