@@ -53,17 +53,19 @@
     }
 
     //FUNCION INSERTAR LOCALIZACION EN LA BASE DE DATOS
-    function insertarLocalizacion($nombre, $descripcion, $pInteres, $importancia ){
+    function insertarLocalizacion($nombre, $descripcion, $pInteres, $importancia, $idJuegos ){
         
         $conexion = conexionBD();
 
         try {
-            $stmt = $conexion->prepare("INSERT INTO localizaciones (nombre, descripcion, pInteres, importancia) VALUES (?, ?, ?, ?)" );
+            $stmt = $conexion->prepare("INSERT INTO localizaciones (nombre, descripcion, pInteres, importancia) VALUES (?, ?, ?, ?, ?)" );
     
             $stmt->bindValue(1, $nombre);
             $stmt->bindValue(2, $descripcion);
             $stmt->bindValue(3, $pInteres);
             $stmt->bindValue(4, $importancia);
+            $stmt->bindValue(4, $idJuegos);
+
             $stmt->execute();
         } catch (PDOException $ex) {
             echo $ex->getMessage();
@@ -87,12 +89,12 @@
 
     //MOSTRAR TABLA juegos DE LA BASE DE DATOS
     function selectJuegos() {
-        
+
         $conexion = conexionBD();
         $tareas = null;
 
         try {
-            $stmt = $conexion->prepare("SELECT * FROM juegos ");
+            $stmt = $conexion->prepare("SELECT * FROM juegos");
             $stmt->execute();
             $tareas = $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $ex) {
@@ -102,11 +104,6 @@
 
         return $tareas;
     }
-
-
-
-
-
 
 
 
