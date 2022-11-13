@@ -1,5 +1,4 @@
 <?php
-session_start();
 include_once("lib.php");
 include_once("modelo.php");
 ?>
@@ -28,25 +27,27 @@ if (isset($_GET["insertarLocalizacion"])) {
     echo '<script>window.location="' . "index.php" . '"</script>';
 }
 
-//para los botones con variable accion
-if (isset($_GET["accion"])) {
+    //para los botones con variable accion
+    if (isset($_GET["accion"])) {
 
     //borrar un juego por titulo
     if ($_GET["accion"] == "borrar") {
         borrarJuego(filtrado($_GET["id"]));
-        echo '<script>window.location="' . "index.php" . '"</script>';
+        echo '<script>window.location="'."index.php".'"</script>';
     }
 
     //borrar localizacion por el id 
     if ($_GET["accion"] == "borrarLocalizacion") {
-        borrarLocalizacion(filtrado($_GET["idJuegos"]));
-        echo '<script>window.location="' . "localizaciones.php" . '"</script>';
+        borrarLocalizacion2(filtrado($_GET["idLoca"]));
+        echo '<script>window.location="'."index.php".'"</script>';
+        
     }
 
     if ($_GET["accion"] == "infoLocalizacion") {
-
         $i = $_GET["id"];
-        echo '<script>window.location="' . "localizaciones.php?ids=" . $i . '"</script>';
+        include("header.php");
+        pintarLocalizacion($i);
+        include("footer.php");
     }
 }
 

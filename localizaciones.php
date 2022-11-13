@@ -35,7 +35,7 @@
             <div class="table-responsive table-dark">
 
             <?php
-               pintarLocalizacion()
+               
                ?>
 
 

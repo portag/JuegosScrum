@@ -104,13 +104,26 @@
         return $tareas;
     }
 
-    function borrarLocalizacion($idJuegos) {
+    function borrarLocalizacion($idLoca) {
 
         $conexion = conexionBD();
 
         try {
-            $stmt = $conexion->prepare("DELETE FROM localizaciones WHERE idJuegos = ?");
-            $stmt->bindValue(1, $idJuegos);
+            $stmt = $conexion->prepare("DELETE FROM localizaciones WHERE idLoca = ?");
+            $stmt->bindValue(1, $idLoca);
+            $stmt->execute();
+        } catch (PDOException $ex) {
+            echo $ex->getMessage();
+        }
+        $conexion = null; //Cerrar la conexión
+    }
+
+    function borrarLocalizacion2($ids) {
+        $conexion = conexionBD();
+
+        try {
+            $stmt = $conexion->prepare("DELETE FROM localizaciones WHERE idLoca = ?");
+            $stmt->bindValue(1, $ids);
             $stmt->execute();
         } catch (PDOException $ex) {
             echo $ex->getMessage();

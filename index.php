@@ -1,4 +1,8 @@
-<?php include("header.php"); ?>
+<?php
+ include("header.php");
+ include("lib.php");
+ ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,10 +35,10 @@
             <h6 class="m-0 font-weight-bold text-dark text-center">Juegos</h6>
         </div>
         <div class="card-body">
-            <div class="table-responsive table-dark">
-<?php
-               pintarJuegos()
-               ?>
+            <div class="table-responsive table-primary">
+            <?php
+            pintarJuegos();
+            ?>
               
                     </tbody>
                 </table>
