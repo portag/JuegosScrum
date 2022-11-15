@@ -48,6 +48,16 @@ if (isset($_GET["addLoca"])) {
        
     }
 
+    if ($_GET["accion"] == "addLoca") {
+        $i = $_GET["id"];
+        echo '<script>window.location="'."addLocalizacion.php?valor=$i".'"</script>';
+    }
+
+    if ($_GET["accion"] == "Insertar") {
+        insertarLocalizacion($_GET["nombre"],$_GET["descripcion"],$_GET["pInteres"],$_GET["importancia"],$_GET["idjuegos"]);
+        //echo '<script>window.location="'."index.php".'"</script>';
+    }
+
 }
 
 

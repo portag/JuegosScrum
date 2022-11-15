@@ -33,26 +33,29 @@
 
                 </div>
                 <form class="user" action="controlador.php" method="get">
-                    <div class="form-group">
-                        <input type="text" class="form-control form-control-user" id="itulo"
-                         name="titulo" aria-describedby="titulo" placeholder="Titulo">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control form-control-user" id="descripcion"
-                         name="descripcion" aria-describedby="descripcion" placeholder="Descripcion">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control form-control-user" id="plataforma"
-                         name="plataforma" aria-describedby="plataforma" placeholder="Plataforma">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control form-control-user" id="genero"
-                         name="genero" aria-describedby="genero" placeholder="Genero" min=0 max=100>
-                    </div>
+                <div class='mb-3'>
+                            <label for='nombre' class='form-label'>Nombre</label>
+                            <input type='text' name='nombre' class='form-control'>
+                        </div>
 
-                    <input type="hidden" name="idjuegos" value="<?php $_GET['id'];?>">
+                        <div class='mb-3'>
+                            <label for='descripcion' class='form-label'>Descripción</label>
+                            <textarea class='form-control' name="descripcion" id="" cols="30" rows="5"></textarea>
+                        </div>
 
-                    <input type="submit" id="add" name="accion" value="addLoca" class="btn btn-dark btn-user btn-block" />
+                        <div class='mb-3'>
+                            <label for='pInteres' class='form-label'>Punto de interes</label>
+                            <input type='text' name='pInteres' class='form-control'>
+                        </div>
+
+                        <div class='mb-3'>
+                            <label for='importancia' class='form-label'>Importancia</label> <br>
+                            <input type='number' name='importancia' class='form-control' min='1' max='3'>
+                        </div>
+
+                    <input type="hidden" name="idjuegos" value="<?php $_GET['valor']; ?>">
+
+                    <input type="submit" id="add" name="accion" value="Insertar" class="btn btn-dark btn-user btn-block" />
 
                 </form>
                 <hr>
