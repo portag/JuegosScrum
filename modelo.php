@@ -58,13 +58,14 @@
         $conexion = conexionBD();
 
         try {
-            $stmt = $conexion->prepare("INSERT INTO localizaciones (nombre, descripcion, pInteres, importancia, idJuegos) VALUES (?, ?, ?, ?, ?)");
+            $stmt = $conexion->prepare("INSERT INTO localizaciones (nombre, descripcion, pInteres, importancia, idjuegos) VALUES (?, ?, ?, ?, ?)");
     
             $stmt->bindValue(1, $nombre);
             $stmt->bindValue(2, $descripcion);
             $stmt->bindValue(3, $pInteres);
             $stmt->bindValue(4, $importancia);
-            $stmt->bindValue(4, $idJuegos);
+            $stmt->bindValue(5, $idJuegos);
+            //$_GET['$idJuego']
 
             $stmt->execute();
         } catch (PDOException $ex) {

@@ -17,7 +17,7 @@ if (isset($_GET["insertar"])) {
 
 
 //para añadir localizacion
-if (isset($_GET["insertarLocalizacion"])) {
+if (isset($_GET["addLoca"])) {
     $nombre = filtrado($_GET["nombre"]);
     $descripcion = filtrado($_GET["descripcion"]);
     $pInteres = filtrado($_GET["pInteres"]);
@@ -41,6 +41,11 @@ if (isset($_GET["insertarLocalizacion"])) {
         borrarLocalizacion2(filtrado($_GET["idLoca"]));
         echo '<script>window.location="'."index.php".'"</script>';
         
+    }
+    if ($_GET["accion"] == "infoLocalizacion") {
+        $i = $_GET["id"];
+        echo '<script>window.location="'."localizaciones.php?valor=$i".'"</script>';
+       
     }
 
 }
