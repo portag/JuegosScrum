@@ -56,7 +56,7 @@
     function insertarLocalizacion($nombre, $descripcion, $pInteres, $importancia, $idJuegos ){
         
         $conexion = conexionBD();
-
+    
         try {
             $stmt = $conexion->prepare("INSERT INTO localizaciones (nombre, descripcion, pInteres, importancia, idjuegos) VALUES (?, ?, ?, ?, ?)");
     

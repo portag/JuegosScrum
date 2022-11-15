@@ -53,7 +53,7 @@
                             <input type='number' name='importancia' class='form-control' min='1' max='3'>
                         </div>
 
-                    <input type="hidden" name="idjuegos" value="<?php $_GET['valor']; ?>">
+                    <input type="hidden" name="idjuegos" value="<?php echo $_GET['id']; ?>">
 
                     <input type="submit" id="add" name="accion" value="Insertar" class="btn btn-dark btn-user btn-block" />
 
