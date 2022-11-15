@@ -35,22 +35,22 @@
                 <form class="user" action="controlador.php" method="get">
                 <div class='mb-3'>
                             <label for='nombre' class='form-label'>Nombre</label>
-                            <input type='text' name='nombre' class='form-control'>
+                            <input type='text' name='nombre' class='form-control form-control-user'>
                         </div>
 
                         <div class='mb-3'>
                             <label for='descripcion' class='form-label'>Descripción</label>
-                            <textarea class='form-control' name="descripcion" id="" cols="30" rows="5"></textarea>
+                            <input type="text" class='form-control form-control-user' name="descripcion" id="">
                         </div>
 
                         <div class='mb-3'>
                             <label for='pInteres' class='form-label'>Punto de interes</label>
-                            <input type='text' name='pInteres' class='form-control'>
+                            <input type='text' name='pInteres' class='form-control form-control-user'>
                         </div>
 
                         <div class='mb-3'>
                             <label for='importancia' class='form-label'>Importancia</label> <br>
-                            <input type='number' name='importancia' class='form-control' min='1' max='3'>
+                            <input type='number' name='importancia' class='form-control form-control-user' min='1' max='3'>
                         </div>
 
                     <input type="hidden" name="idjuegos" value="<?php echo $_GET['id']; ?>">
