@@ -18,7 +18,6 @@ function pintarJuegos()
     echo "<table class='table table-dark table-bordered text-center' style='font-size: 15px;align-items: center;' id='dataTable' width='100%' cellspacing='0'>";
     //Cabecera
     echo "<tr>";
-    echo "<th> ID </th>";
     echo "<th> Titulo </th>";
     echo "<th> Descripción </th>";
     echo "<th> Plataforma </th>";
@@ -32,7 +31,6 @@ function pintarJuegos()
     //Contenido
     foreach ($juegos as $juego) {
         echo '<tr>';
-        echo '<td>' . $juego['id'] . '</td>';
         echo '<td>' . $juego['titulo'] . '</td>';
         echo '<td>' . $juego['descripcion'] . '</td>';
         echo '<td>' . $juego['plataforma'] . '</td>';
@@ -66,7 +64,6 @@ function pintarLocalizacion($idJuegos)
     echo "<th> Descripción </th>";
     echo "<th> pInteres </th>";
     echo "<th> Importancia </th>";
-    echo "<th> idJuego </th>";
     echo "<th> Borrar </th>";
     echo "</tr>";
 
@@ -78,7 +75,6 @@ function pintarLocalizacion($idJuegos)
         echo "<td>" . $localizacion['descripcion'] . "</td>";
         echo "<td>" . $localizacion['pInteres'] . "</td>";
         echo "<td>" . $localizacion['importancia'] . "</td>";
-        echo "<td>" . $localizacion['idjuegos'] . "</td>";
         echo "<td> <a href='controlador.php?accion=borrarLocalizacion&idLoca=" . $localizacion['idLoca'] . "'class='btn btn-danger btn-circle'><i class='fas fa-trash' ></i></a></td>";
         echo "</tr>";
 

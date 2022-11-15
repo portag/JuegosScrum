@@ -33,9 +33,7 @@
         <!-- Sidebar -->
         <ul class="navbar-nav bg-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php" style="
-    width: 152px;
-">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php" style="width: 152px;">
                 <div class="sidebar-brand-icon bg-password-image img-thumbnail rotate-n-15 text-dark  w-100">
                     <i class="fas fa-laugh-wink" style="visibility:hidden"></i>
                 </div>
@@ -44,9 +42,6 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
-
-
-
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item active">
@@ -59,8 +54,6 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="#" data-toggle="modal" data-target="#insertar">Añadir juego</a>
-                        <a class="collapse-item" href="#" data-toggle="modal" data-target="#addLoca">Añadir localizacion</a>
-
                     </div>
                 </div>
             </li>
@@ -85,10 +78,6 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light  topbar mb-4 static-top bg-dark shadow">
-
-
-
-
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
