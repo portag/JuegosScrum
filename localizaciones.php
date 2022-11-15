@@ -1,4 +1,6 @@
 <?php include("header.php"); ?>
+<?php include("lib.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,16 +32,13 @@
             <h6 class="m-0 font-weight-bold text-dark text-center">Localizaciones</h6>
         </div>
         <div class="card-body">
-        <a href='index.php' class='btn btn-dark float-right'><i class='fas fa-gamepad' ></i> Volver a Juegos</a>
-        <br><br>
-            <div class="table-responsive table-dark">
+            <a href='index.php' class='btn btn-dark float-right'><i class='fas fa-gamepad'></i> Volver a Juegos</a>
+            <br><br>
+            <div class="table-responsive">
+                <?php
+                pintarLocalizacion($_GET["id"]); ?>
 
-            <?php
-               
-               ?>
-
-
-                    </tbody>
+                </tbody>
                 </table>
 
             </div>

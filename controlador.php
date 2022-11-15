@@ -43,12 +43,6 @@ if (isset($_GET["insertarLocalizacion"])) {
         
     }
 
-    if ($_GET["accion"] == "infoLocalizacion") {
-        $i = $_GET["id"];
-        include("header.php");
-        pintarLocalizacion($i);
-        include("footer.php");
-    }
 }
 
 
